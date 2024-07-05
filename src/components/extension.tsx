@@ -4,7 +4,8 @@ import { useExtesion } from "~contexts/extension-context"
 import { getVideoData } from "~utils/function"
 
 import { ExtensionActions } from "./extension-actions"
-import { Collapsible } from "./ui/collapsible"
+import { ExtensionPanels } from "./extension-panels"
+import { Collapsible, CollapsibleContent } from "./ui/collapsible"
 
 export const Extension = () => {
   const {
@@ -66,11 +67,9 @@ export const Extension = () => {
           onOpenChange={setExtensionisOpen}
           className="space-y-3">
           <ExtensionActions />
-          <div className="flex flex-col space-y-3">
-            <button className="btn">Action 1</button>
-            <button className="btn">Action 2</button>
-            <button className="btn">Action 3</button>
-          </div>
+          <CollapsibleContent className="w-full h-fit max-h-[500px] border border-zinc-200 rounded-md overflow-auto">
+            <ExtensionPanels />
+          </CollapsibleContent>
         </Collapsible>
       </div>
     </main>

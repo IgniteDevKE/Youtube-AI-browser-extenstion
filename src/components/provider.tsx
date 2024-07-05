@@ -1,5 +1,10 @@
 import { ExtensionProvider } from "~contexts/extension-context"
+import { SummaryProvider } from "~contexts/summary-context"
 
 export const Providers = ({ children }) => {
-  return <ExtensionProvider>{children}</ExtensionProvider>
+  return (
+    <ExtensionProvider>
+      <SummaryProvider>{children}</SummaryProvider>
+    </ExtensionProvider>
+  )
 }
