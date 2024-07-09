@@ -3,7 +3,7 @@ import OpenAI from "openai"
 import type { PlasmoMessaging } from "@plasmohq/messaging"
 
 const llm = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: "sk-proj-JJP01dITH3nmazwByea7T3BlbkFJfiFAR9jgl9NRsfCiR7Q0v"
 })
 
 const createCompletion = async (
