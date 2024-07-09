@@ -4,7 +4,7 @@ import { usePort } from "@plasmohq/messaging/hook"
 
 import { models, prompts, type Model, type Prompt } from "~lib/constants"
 
-import { useExtesion } from "./extension-context"
+import { useExtension } from "./extension-context"
 
 interface SummaryContext {
   summaryModel: Model
@@ -42,7 +42,7 @@ export const SummaryProvider = ({ children }: SummaryProviderProps) => {
   const [summaryIsGenerating, setSummaryIsGenerating] = useState<boolean>(false)
 
   const port = usePort("completion")
-  const { extensionData, extensionLoading } = useExtesion()
+  const { extensionData, extensionLoading } = useExtension()
 
   const generateSummary = async (e: any) => {
     e.preventDefault()

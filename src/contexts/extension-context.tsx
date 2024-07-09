@@ -39,7 +39,7 @@ interface ExtensionContext extends ExtensionState, ExtensionActions {}
 
 const ExtensionContext = createContext<ExtensionContext | undefined>(undefined)
 
-export function useExtesion() {
+export function useExtension() {
   const context = useContext(ExtensionContext)
   if (!context) {
     throw new Error("useExtension must be used within a ExtensionProvider")
