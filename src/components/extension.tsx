@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 
-import { useExtesion } from "~contexts/extension-context"
+import { useExtension } from "~contexts/extension-context"
 import { getVideoData } from "~utils/function"
 
 import { ExtensionActions } from "./extension-actions"
@@ -19,7 +19,7 @@ export const Extension = () => {
     extensionTheme,
     extensionisOpen,
     extensionVideoId
-  } = useExtesion()
+  } = useExtension()
 
   useEffect(() => {
     const getVideoId = () => {

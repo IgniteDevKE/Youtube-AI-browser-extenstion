@@ -8,7 +8,7 @@ import {
   Pencil2Icon
 } from "@radix-ui/react-icons"
 
-import { useExtesion } from "~contexts/extension-context"
+import { useExtension } from "~contexts/extension-context"
 import { useCopyToClipboard } from "~lib/hooks/use-copy-to-clipboard"
 
 import { Button } from "./ui/button"
@@ -17,7 +17,7 @@ import { TooltipWrapper } from "./ui/tooltip-wrapper"
 
 export const ExtensionActions = () => {
   const { setExtensionPanel, extensionisOpen, setExtensionisOpen } =
-    useExtesion()
+    useExtension()
   const { isCopied, copyToClipboard } = useCopyToClipboard({ timeout: 2000 })
   const CopyVideoURL = () => {
     if (isCopied) return

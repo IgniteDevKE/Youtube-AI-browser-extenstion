@@ -1,9 +1,9 @@
-import { useExtesion } from "~contexts/extension-context"
+import { useExtension } from "~contexts/extension-context"
 
 import { Summary } from "./summary"
 
 export const ExtensionPanels = () => {
-  const { extensionPanel } = useExtesion()
+  const { extensionPanel } = useExtension()
   return (
     <div>
       {extensionPanel === "Summary" && <Summary />}
