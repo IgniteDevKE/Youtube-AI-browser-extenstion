@@ -69,3 +69,14 @@ export const prompts: Prompt[] = [
     content: "Give me a summary of this video"
   }
 ]
+
+export type Transcript = {
+  text: string
+  startTime: number
+  endTime: number
+}
+
+export type Message = {
+  role: string
+  content: string
+}
