@@ -1,3 +1,4 @@
+import { ChatProvider } from "~contexts/chat-context"
 import { ExtensionProvider } from "~contexts/extension-context"
 import { SummaryProvider } from "~contexts/summary-context"
 import { TranscriptProvider } from "~contexts/transcript-context"
@@ -5,9 +6,11 @@ import { TranscriptProvider } from "~contexts/transcript-context"
 export const Providers = ({ children }) => {
   return (
     <ExtensionProvider>
-      <SummaryProvider>
-        <TranscriptProvider>{children}</TranscriptProvider>
-      </SummaryProvider>
+      <ChatProvider>
+        <SummaryProvider>
+          <TranscriptProvider>{children}</TranscriptProvider>
+        </SummaryProvider>
+      </ChatProvider>
     </ExtensionProvider>
   )
 }
