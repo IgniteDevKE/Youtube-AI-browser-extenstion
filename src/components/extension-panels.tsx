@@ -1,5 +1,6 @@
 import { useExtension } from "~contexts/extension-context"
 
+import { Chat } from "./chat"
 import { Summary } from "./summary"
 import { Transcript } from "./transcript"
 
@@ -9,7 +10,7 @@ export const ExtensionPanels = () => {
     <div>
       {extensionPanel === "Summary" && <Summary />}
       {extensionPanel === "Transcript" && <Transcript />}
-      {extensionPanel === "Chat" && <h1>Chat</h1>}
+      {extensionPanel === "Chat" && <Chat />}
     </div>
   )
 }
