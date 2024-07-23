@@ -8,6 +8,7 @@ import { Button } from "./ui/button"
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
   SelectTrigger,
   SelectValue
@@ -32,7 +33,7 @@ export const SummaryActions = () => {
   }
 
   return (
-    <div className="flex flex-row w-full justify-between items-center sticky top-0 z-20 bg-white pt-3.5 pb-2 px-3">
+    <div className="flex w-full justify-between items-center sticky top-0 z-20 bg-white mb-24 pt-3.5 pb-2 px-3">
       <Select
         value={summaryModel.value}
         onValueChange={(value) =>
@@ -42,14 +43,16 @@ export const SummaryActions = () => {
           <SelectValue placeholder="Model" />
         </SelectTrigger>
         <SelectContent>
-          {models.map((model: Model) => (
-            <SelectItem key={model.value} value={model.value}>
-              <div className="flex flex-row items-center">
-                <div className="mr-2">{model.icon}</div>
-                {model.label}
-              </div>
-            </SelectItem>
-          ))}
+          <SelectGroup>
+            {models.map((model: Model) => (
+              <SelectItem key={model.value} value={model.value}>
+                <div className="flex flex-row items-center">
+                  <div className="mr-2">{model.icon}</div>
+                  {model.label}
+                </div>
+              </SelectItem>
+            ))}
+          </SelectGroup>
         </SelectContent>
       </Select>
 
