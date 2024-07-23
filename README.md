@@ -1,33 +1,85 @@
-This is a [Plasmo extension](https://docs.plasmo.com/) project bootstrapped with [`plasmo init`](https://www.npmjs.com/package/plasmo).
+# YouTube AI Browser Extension
 
-## Getting Started
+Welcome to the YouTube AI Browser Extension repository! This extension enhances your YouTube experience by leveraging AI to generate video summaries, follow along with transcripts, and even provide chat functionality.
 
-First, run the development server:
+## Features
 
-```bash
-pnpm dev
-# or
-npm run dev
-```
+- **AI-Powered Summaries**: Automatically generate concise summaries of YouTube videos.
+- **Transcript Follow-Along**: View and follow the video transcript in real-time.
+- **AI Chat**: Engage with an AI chatbot to discuss video content, ask questions, and get more information.
 
-Open your browser and load the appropriate development build. For example, if you are developing for the chrome browser, using manifest v3, use: `build/chrome-mv3-dev`.
+## Installation
 
-You can start editing the popup by modifying `popup.tsx`. It should auto-update as you make changes. To add an options page, simply add a `options.tsx` file to the root of the project, with a react component default exported. Likewise to add a content page, add a `content.ts` file to the root of the project, importing some module and do some logic, then reload the extension on your browser.
+To install the extension, follow these steps:
 
-For further guidance, [visit our Documentation](https://docs.plasmo.com/)
+1. **Clone the Repository**:
+   ```sh
+   git clone https://github.com/IgniteDevKE/Youtube-AI-browser-extenstion.git
+   ```
+2. **Navigate to the Directory**:
+   ```sh
+   cd Youtube-AI-browser-extenstion
+   ```
+3. **Load the Extension in Your Browser**:
+   - Open your browser and navigate to the extensions page:
+     - **Chrome**: `chrome://extensions/`
+     - **Firefox**: `about:debugging#/runtime/this-firefox`
+   - Enable "Developer mode" if needed.
+   - Click on "Load unpacked" (Chrome) or "Load Temporary Add-on" (Firefox).
+   - Select the cloned repository folder.
 
-## Making production build
+## Usage
 
-Run the following:
+Once the extension is installed, navigate to any YouTube video page. The extension will automatically activate and display the following features:
 
-```bash
-pnpm build
-# or
-npm run build
-```
+- **Summary Tab**: View a summary of the video content.
+- **Transcript Tab**: Follow the transcript in real-time as the video plays.
+- **Chat Tab**: Interact with the AI chatbot to discuss the video content, ask questions, or get more insights.
 
-This should create a production bundle for your extension, ready to be zipped and published to the stores.
+## Contributing
 
-## Submit to the webstores
+We welcome contributions to enhance this extension! To contribute, follow these steps:
 
-The easiest way to deploy your Plasmo extension is to use the built-in [bpp](https://bpp.browser.market) GitHub action. Prior to using this action however, make sure to build your extension and upload the first version to the store to establish the basic credentials. Then, simply follow [this setup instruction](https://docs.plasmo.com/framework/workflows/submit) and you should be on your way for automated submission!
+1. **Fork the Repository**:
+   Click on the `Fork` button at the top right corner of this page.
+
+2. **Clone Your Fork**:
+
+   ```sh
+   git clone https://github.com/YOUR-USERNAME/Youtube-AI-browser-extenstion.git
+   ```
+
+3. **Create a Branch**:
+
+   ```sh
+   git checkout -b feature-branch
+   ```
+
+4. **Make Your Changes**:
+   Implement your feature or fix a bug.
+
+5. **Commit Your Changes**:
+
+   ```sh
+   git add .
+   git commit -m "Description of your changes"
+   ```
+
+6. **Push to Your Fork**:
+
+   ```sh
+   git push origin feature-branch
+   ```
+
+7. **Submit a Pull Request**:
+   Open a pull request to the `main` branch of this repository.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or feedback, please open an issue on this repository or reach out to the maintainer at [ianchegedev@gmail.com](mailto:ianchegedev@gmail.com).
+
+---
