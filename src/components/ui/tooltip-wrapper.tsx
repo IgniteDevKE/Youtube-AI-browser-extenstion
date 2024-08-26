@@ -3,7 +3,7 @@ import {
   TooltipContent,
   TooltipProvider,
   TooltipTrigger
-} from "./tooltip"
+} from "@/src/components/ui/tooltip"
 
 export function TooltipWrapper({ children, text }) {
   return (
