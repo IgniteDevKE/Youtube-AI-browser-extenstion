@@ -14,7 +14,11 @@ import {
 } from "./ui/select"
 import { TooltipWrapper } from "./ui/tooltip-wrapper"
 
-export const ChatAction = () => {
+interface ChatActionProps {
+  className?: string
+}
+
+export const ChatAction = ({ className }: ChatActionProps) => {
   const {
     chatModel,
     chatIsGenerating,
@@ -31,7 +35,7 @@ export const ChatAction = () => {
   }
 
   return (
-    <div className="flex w-full justify-between items-center sticky top-0 z-20 bg-white pt-3.5 pb-2 px-3">
+    <div className="flex flex-row w-full justify-between items-center absolute top-0 z-20 bg-white dark:bg-[#0f0f0f] pt-3.5 pb-2 px-3">
       <Select
         value={chatModel.value}
         onValueChange={(value) =>
@@ -43,7 +47,7 @@ export const ChatAction = () => {
         <SelectContent>
           {models.map((model: Model) => (
             <SelectItem key={model.value} value={model.value}>
-              <div className="flex items-center">
+              <div className="flex flex-row items-center">
                 <div className="mr-2">{model.icon}</div>
                 {model.label}
               </div>

@@ -56,11 +56,11 @@ function TranscriptItem({ item, searchInput }: TranscriptItemProps) {
     <div
       data-start-time={item.startTime}
       data-end-time={item.endTime}
-      className="flex flex-col w-full justify-between items-center p-3 border-[0.5px] rounded-md border-zinc-200 space-y-4 group">
+      className="flex flex-col w-full justify-between items-center p-3 border-[0.5px] rounded-md border-zinc-200 dark:border-zinc-800 space-y-4 group">
       <div className="w-full flex flex-row items-center justify-between">
         <Button
           variant="outline"
-          className="space-x-2 bg-transparent dark:bg-transparent border-[0.5px]"
+          className="space-x-2 bg-transparent dark:bg-transparent dark:hover:bg-transparent border-[0.5px]"
           onClick={JumpToTime}>
           <ClockIcon className="h-4 w-4 opacity-60" />
           <span className="text-blue-500 text-[11px] hover:cursor-pointer hover:underline">
@@ -72,7 +72,7 @@ function TranscriptItem({ item, searchInput }: TranscriptItemProps) {
           <TooltipWrapper text={"Copy Section"}>
             <Button variant="outline" size="icon" onClick={CopySection}>
               {isCopied ? (
-                <CheckIcon className="h-4 w-4 opacity-60" />
+                <CheckIcon className="h-4.5 w-4.5 opacity-60" />
               ) : (
                 <ClipboardCopyIcon className="h-4 w-4 opacity-60" />
               )}

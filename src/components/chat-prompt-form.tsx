@@ -106,8 +106,11 @@ export default function PromptForm({ className }: PromptFormProps) {
           }
         ])
       }}
-      className={cn("absolute bottom-0 z-10 p-4 w-full bg-white", className)}>
-      <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden rounded-md  border border-zinc-200">
+      className={cn(
+        "absolute bottom-0 z-10 p-4 w-full bg-white dark:bg-[#0f0f0f]",
+        className
+      )}>
+      <div className="relative flex max-h-60 w-full grow flex-col overflow-hidden rounded-md  border border-zinc-200 dark:border-zinc-800">
         <Textarea
           ref={inputRef}
           tabIndex={0}

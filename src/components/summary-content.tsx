@@ -8,7 +8,7 @@ export const SummaryContent = () => {
   const { summaryIsGenerating, summaryContent, generateSummary } = useSummary()
   if (!summaryContent && summaryIsGenerating) {
     return (
-      <div>
+      <div className="flex justify-center items-center w-full p-3 bg-white dark:bg[#0f0f0f]">
         <SummarySkeleton />
       </div>
     )

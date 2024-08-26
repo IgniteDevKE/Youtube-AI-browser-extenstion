@@ -24,7 +24,7 @@ export const ExtensionActions = () => {
     copyToClipboard(window.location.href)
   }
   return (
-    <div className="border border-zinc-200 rounded-md flex items-center justify-between p-2.5 px-3 dark:bg-[#0f0f0f] dark:text-white dark:border-zinc-800">
+    <div className="p-2.5 px-3 dark:bg-[#0f0f0f] dark:text-white rounded-md flex items-center justify-between border border-zinc-200 dark:border-zinc-800">
       <CardStackPlusIcon className="w-6 h-6 opacity-50 ml-2" />
       <div className="flex justify-center items-center space-x-2">
         <div className="flex -space-x-px">
@@ -34,7 +34,7 @@ export const ExtensionActions = () => {
               if (!extensionisOpen) setExtensionisOpen(true)
             }}
             variant="outline"
-            className="rounded-r-none focus:z-10 bg-transparent space-x-2 items-center">
+            className="rounded-r-none focus:z-10 bg-transparent dark:bg-transparent space-x-2 items-center">
             <Pencil2Icon className="w-4 h-4 opacity-60" />
             <span className="opacity-90">Summary</span>
           </Button>
@@ -44,7 +44,7 @@ export const ExtensionActions = () => {
               if (!extensionisOpen) setExtensionisOpen(true)
             }}
             variant="outline"
-            className="rounded-r-none focus:z-10 bg-transparent space-x-2 items-center">
+            className="rounded-none focus:z-10 bg-transparent dark:bg-transparent space-x-2 items-center">
             <ActivityLogIcon className="w-4 h-4 opacity-60" />
             <span className="opacity-90">Transcript</span>
           </Button>
@@ -54,7 +54,7 @@ export const ExtensionActions = () => {
               if (!extensionisOpen) setExtensionisOpen(true)
             }}
             variant="outline"
-            className="rounded-r-none focus:z-10 bg-transparent space-x-2 items-center">
+            className="rounded-l-none focus:z-10 bg-transparent dark:bg-transparent space-x-2 items-center">
             <ChatBubbleIcon className="h-4 w-4 opacity-60" />
             <span className="opacity-90">Chat</span>
           </Button>

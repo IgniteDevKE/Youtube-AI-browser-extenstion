@@ -19,14 +19,16 @@ const TranscriptContent = React.forwardRef<
 
   if (extensionLoading || !extensionData) {
     return (
-      <div className="flex justify-center items-center w-full p-3 bg-white">
+      <div className="flex justify-center items-center w-full p-3 bg-white dark:bg-[#0f0f0f]">
         <TranscriptSkeleton />
       </div>
     )
   }
 
   return (
-    <div ref={ref}>
+    <div
+      ref={ref}
+      className="flex justify-center items-center w-full p-3 bg-white dark:bg-[#0f0f0f]">
       <TranscriptList
         transcript={transcriptJson}
         searchInput={transcriptSearch}

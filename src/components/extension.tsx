@@ -67,7 +67,7 @@ export const Extension = () => {
           onOpenChange={setExtensionisOpen}
           className="space-y-3">
           <ExtensionActions />
-          <CollapsibleContent className="w-full h-fit max-h-[500px] border border-zinc-200 rounded-md overflow-auto">
+          <CollapsibleContent className="w-full h-fit max-h-[500px] border border-zinc-200 dark:border-zinc-800 dark:bg-[#0f0f0f] dark:text-white rounded-md overflow-auto no-scrollbar">
             <ExtensionPanels />
           </CollapsibleContent>
         </Collapsible>

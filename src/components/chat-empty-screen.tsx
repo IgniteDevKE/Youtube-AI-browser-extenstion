@@ -35,7 +35,7 @@ export const EmptyScreen = ({
 }: EmptyScreenProps) => {
   return (
     <div className={cn("mx-auto px-8", className)}>
-      <div className="rounded-md bg-background p-8 w-full justify-center flex flex-col items-center -mt-10">
+      <div className="rounded-md bg-background p-8 w-full justify-center flex flex-col items-center">
         <span className="text-2xl flex items-center mb-8">
           Youtube
           <IconSparkles className="inline mr-0 ml-0.5 w-4 sm:w-5 mb-1" />
@@ -57,7 +57,7 @@ export const EmptyScreen = ({
               key={index}
               variant="outline"
               onClick={() => setPromptInput(message.message)}
-              className="h-auto w-full justify-start border-[0.5px] p-3 opacity-80">
+              className="h-auto w-full justify-start dark:bg-transparent border-[0.5px] p-3 opacity-80">
               <ArrowRightIcon className="mr-2 text-muted-foreground" />
               {message.heading}
             </Button>

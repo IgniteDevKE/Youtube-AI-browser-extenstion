@@ -2,11 +2,16 @@ import { useEffect, useRef } from "react"
 
 import { useChat } from "~contexts/chat-context"
 import type { Message } from "~lib/constants"
+import { cn } from "~lib/utils"
 
 import { EmptyScreen } from "./chat-empty-screen"
 import { ChatItem } from "./chat-item"
 
-export const ChatList = () => {
+interface ChatListProps {
+  className?: string
+}
+
+export const ChatList = ({ className }: ChatListProps) => {
   const { chatMessages, setChatPrompt } = useChat()
 
   const scrollContainerRef = useRef(null)
@@ -18,7 +23,7 @@ export const ChatList = () => {
   }, [chatMessages])
 
   return (
-    <div className="pt-16">
+    <div className={cn("pt-16", className)}>
       {!chatMessages || chatMessages.length === 0 ? (
         <EmptyScreen setPromptInput={setChatPrompt} />
       ) : (

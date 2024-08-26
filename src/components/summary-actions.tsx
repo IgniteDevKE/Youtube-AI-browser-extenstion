@@ -33,7 +33,7 @@ export const SummaryActions = () => {
   }
 
   return (
-    <div className="flex w-full justify-between items-center sticky top-0 z-20 bg-white mb-24 pt-3.5 pb-2 px-3">
+    <div className="flex flex-row w-full justify-between items-center sticky top-0 z-10 dark:bg-[#0f0f0f] bg-white pt-3.5 pb-2 px-3">
       <Select
         value={summaryModel.value}
         onValueChange={(value) =>
@@ -63,7 +63,7 @@ export const SummaryActions = () => {
             size="icon"
             onClick={generateSummary}
             disabled={summaryIsGenerating}>
-            <ReloadIcon className="h-4 w-4 opacity-60 dark:text-white" />
+            <ReloadIcon className="h-4 w-4 opacity-6" />
           </Button>
         </TooltipWrapper>
 
