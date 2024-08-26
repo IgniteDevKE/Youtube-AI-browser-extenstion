@@ -1,5 +1,6 @@
-import { BarChartIcon } from "@radix-ui/react-icons"
 import type { ReactNode } from "react"
+
+import { IconOpenAI } from "~components/ui/icons"
 
 export type Model = {
   value: string
@@ -19,13 +20,19 @@ export const models: Model[] = [
     value: "default",
     label: "GPT-3.5",
     content: "gpt-3.5-turbo",
-    icon: <BarChartIcon className="h-4 w-4 opacity-70" />
+    icon: <IconOpenAI className="h-4 w-4 opacity-70" />
   },
   {
     value: "GPT-4",
     label: "GPT-4",
     content: "gpt-4-turbo",
-    icon: <BarChartIcon className="h-4 w-4 opacity-70" />
+    icon: <IconOpenAI className="h-4 w-4 opacity-70" />
+  },
+  {
+    value: "GPT-4o",
+    label: "GPT-4o",
+    content: "gpt-4o",
+    icon: <IconOpenAI className="h-4 w-4 opacity-70" />
   }
 ]
 
