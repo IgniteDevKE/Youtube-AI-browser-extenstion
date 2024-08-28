@@ -39,41 +39,52 @@ export const models: Model[] = [
 export const prompts: Prompt[] = [
   {
     value: "default",
-    label: "Default (Prompt)",
-    content: `Here is the prompt (you can replace the default in the extension tab):
+    label: "In-depth look",
+    content: `Your task is to generate a complete, clear, and concise summary of a YouTube video based on its transcript. Ensure the summary includes all key points, finishes each section completely, and ends with a full stop.
 
-    "Your output should use the following template:
     
     ## Summary
     
-    ## Analogy
+    ## Insights
     
     ## Notes
     
     - [Emoji] Bulletpoint
     
-    ### Keywords
+    ### Key Concepts
     
     - Explanation
     
-    You have been tasked with creating a concise summary of a YouTube video using its transcription to supply college student notes to use himself. You are to act like an expert in the subject the transcription is written about.
+    Follow strictly these steps:
     
-    Make a summary of the transcript. Use keywords from the transcript. Don't explain them. Keywords will be explained later.
+    1. **Summary:** Summarize the main points of the video. Ensure each section, especially the conclusion, is fully completed without cutting off, and that the summary ends with a full stop.
     
-    Additionally make a short complex analogy to give context and/or analogy from day-to-day life from the transcript.
+    2. **Insights:** Identify and highlight the most insightful moments or unique perspectives shared in the video. These could be new ideas, interesting theories, or important arguments. Ensure nothing is left incomplete and ending with a full stop.
     
-    Create 10 bullet points (each with an appropriate emoji) that summarize the key points or important moments from the video's transcription.
+    3. **Notes:** Generate up to 8 bullet points, each with an appropriate emoji, summarizing key actions, takeaways, or advice presented in the video. Make sure each bllet point is fully articulated and ends with a full stop.
     
-    In addition to the bullet points, extract the most important keywords and any complex words not known to the average reader aswell as any acronyms mentioned. For each keyword and complex word, provide an explanation and definition based on its occurrence in the transcription.
     
-    You are also a transcription AI and you have been provided with a text that may contain mentions of sponsorships or brand names. Your task write what you have been said to do while avoiding any mention of sponsorships or brand names.
+    Ensure Brand Neutrality. If the video mentions sponsorships, brands, or promotions, rewrite the content to maintain neutrality while preserving the educational value.
     
-    Please ensure that the summary, bullet points, and explanations fit within the 330-word limit, while still offering a comprehensive and clear understanding of the video's content. Use the text above: "`
+    Ensure that the entire output maintains clarity and engagement throughout, and ensure every point is fully elaborated, especially in the final summary, and ensure that you end the summary always with a full stop at the end of each section and the final summary.
+    
+    When done summarizing, always end with a full stop - to signify the end of the summary.
+    `
   },
   {
     value: "prompt-one",
-    label: "Prompt Two",
-    content: "Give me a summary of this video"
+    label: "Quick look",
+    content: `Your task is to generate a brief but complete summary of this video.
+
+    Follow strictly these steps:
+
+    Ensure all key points in the transcript are fully articulated.
+
+    When done summarizing, always end with a full stop - to signify the end of the summary.
+
+    The entire output should be well paragraphed across the main points in the transcript.
+      
+      `
   }
 ]
 
