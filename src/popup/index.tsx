@@ -1,87 +1,66 @@
-import React, { useState } from "react"
+import giftIcon from "data-base64:../../assets/gift.png"
+import logoIcon from "data-base64:../../assets/icon.webp"
 
 const Popup = () => {
-  const [isEnabled, setIsEnabled] = useState(true)
-
-  const toggleExtension = () => {
-    setIsEnabled(!isEnabled)
-    // Logic to enable/disable the extension can be implemented here
-  }
-
   return (
     <div
       style={{
-        padding: "16px",
-        width: "450px",
+        padding: "5px 16px",
+        width: "300px",
         height: "auto",
-        border: "2px solid #e5e7eb", // Tailwind's border-2
+        border: "2px solid #e5e7eb",
         backgroundColor: "white",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)", // Tailwind's shadow-lg
-        borderRadius: "8px", // Tailwind's rounded-lg
+        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        borderRadius: "8px",
         display: "flex",
-        flexDirection: "column",
-        gap: "16px" // Tailwind's space-y-4
+        flexDirection: "column"
       }}>
       {/* Extension Header */}
-      <header style={{ textAlign: "center" }}>
-        <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
-          YouTube AI Summaries
-        </h1>
-        <p style={{ color: "#6b7280", fontSize: "1.25rem" }}>
-          Your smart assistant for video summaries, transcripts, and chat.
+      <header style={{ textAlign: "start" }}>
+        <div style={{ display: "flex", gap: "2px", alignItems: "center" }}>
+          <img
+            src={logoIcon}
+            alt="Extension Logo"
+            style={{ width: "48px", height: "48px", borderRadius: "8px" }}
+          />
+          <h1 style={{ fontSize: "1.5rem", fontWeight: "bold" }}>
+            YouTube Watchly
+          </h1>
+        </div>
+
+        <p style={{ fontSize: "1rem", marginTop: "2px" }}>
+          The smartest, fastest way to digest videos with instant summaries,
+          insightful transcripts packed with chat feature.
         </p>
       </header>
 
-      {/* Enable/Disable Toggle */}
+      {/* Subscription statement */}
+      <div style={{}}>
+        <span style={{ fontSize: "1rem" }}>
+          Your subscription is currently inactive. Subscribe to unlock all
+          features and get the best out of YouTube Watchly.
+        </span>
+      </div>
+
+      {/* freemium */}
+      <div style={{ marginTop: "14px", display: "flex", gap: "4px" }}>
+        <img src={giftIcon} alt="" style={{ width: "25px", height: "25px" }} />
+        <span style={{ fontSize: "0.75rem" }}>
+          You get up to 3 free summaries per day, with 2 chats per summary.
+        </span>
+      </div>
+
+      {/* Action buttons */}
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          padding: "8px 0"
+          flexDirection: "column",
+          gap: "8px",
+          marginTop: "8px"
         }}>
-        <span style={{ fontSize: "1.125rem", fontWeight: "600" }}>
-          Extension Status
-        </span>
-        <button
-          onClick={toggleExtension}
-          style={{
-            width: "48px",
-            height: "24px",
-            display: "flex",
-            alignItems: "center",
-            borderRadius: "9999px", // Full rounded for the toggle button
-            padding: "4px",
-            backgroundColor: isEnabled ? "#22c55e" : "#d1d5db", // Green when enabled, gray when disabled
-            transition: "background-color 0.3s"
-          }}>
-          <div
-            style={{
-              backgroundColor: "white",
-              width: "16px",
-              height: "16px",
-              borderRadius: "9999px",
-              boxShadow: "0 1px 3px rgba(0, 0, 0, 0.2)",
-              transform: isEnabled ? "translateX(24px)" : "translateX(0)",
-              transition: "transform 0.3s"
-            }}></div>
-        </button>
-      </div>
-
-      {/* Guidance Section */}
-      <section>
-        <h2 style={{ fontSize: "1.125rem", fontWeight: "600" }}>How to Use</h2>
-        <ul style={{ paddingLeft: "20px", color: "#4b5563" }}>
-          <li>Click the extension icon to summarize YouTube videos.</li>
-          <li>Use the AI chat for deeper insights or ask questions.</li>
-          <li>View video transcripts for easy navigation.</li>
-        </ul>
-      </section>
-
-      {/* Links to Settings and Feedback */}
-      <div style={{ display: "flex", gap: "8px" }}>
         <a
-          href="#"
+          href="#" // Add your subscription link here
+          target="_blank"
           style={{
             display: "block",
             textAlign: "center",
@@ -90,29 +69,36 @@ const Popup = () => {
             padding: "8px",
             borderRadius: "8px",
             textDecoration: "none",
-            flex: 1,
-            transition: "background-color 0.3s"
+            flex: 1
           }}>
-          Go to Settings
+          Subscribe to Pro
         </a>
         <a
-          href="https://chrome.google.com/webstore/detail/your-extension-id"
+          href="https://www.youtube.com"
+          target="_blank"
           style={{
             display: "block",
             textAlign: "center",
-            color: "#6b7280",
-            textDecoration: "underline",
-            flex: 1,
-            transition: "color 0.3s"
+            backgroundColor: "#3b82f6",
+            color: "white",
+            padding: "8px",
+            borderRadius: "8px",
+            textDecoration: "none",
+            flex: 1
           }}>
-          Rate Us
+          Open Youtube to get started
         </a>
       </div>
 
       {/* Extension Version */}
       <footer
-        style={{ textAlign: "center", fontSize: "0.875rem", color: "#9ca3af" }}>
-        <p>Version 0.0.1</p>
+        style={{
+          textAlign: "center",
+          fontSize: "0.875rem",
+          color: "#9ca3af",
+          marginTop: "4px"
+        }}>
+        <p>IgniteDev • Version 1.0.0 • 2024</p>
       </footer>
     </div>
   )
