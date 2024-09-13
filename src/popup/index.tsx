@@ -59,7 +59,7 @@ const Popup = () => {
           marginTop: "8px"
         }}>
         <a
-          href="#" // Add your subscription link here
+          href="https://f417-105-163-2-9.ngrok-free.app" // Add your subscription link here
           target="_blank"
           style={{
             display: "block",
