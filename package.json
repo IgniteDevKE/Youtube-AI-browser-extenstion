@@ -5,12 +5,8 @@
   "description": "A browser extension that lets you summarize your videos",
   "author": "IgniteDev Co.",
   "scripts": {
-    "dev": "run-p dev:*",
-    "dev:plasmo": "plasmo dev",
-    "dev:next": "next dev --port 8472",
-    "build": "run-p build:*",
-    "build:plasmo": "plasmo build",
-    "build:next": "next build",
+    "dev": "plasmo dev",
+    "build": "plasmo build",
     "package": "plasmo package"
   },
   "dependencies": {
@@ -22,16 +18,12 @@
     "@radix-ui/react-tooltip": "^1.1.2",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "google-auth-library": "9.14.1",
-    "next": "14.2.13",
     "openai": "^4.52.3",
     "plasmo": "0.88.0",
     "puro": "0.8.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-textarea-autosize": "^8.5.3",
-    "stripe": "16.12.0",
-    "swr": "2.2.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7"
   },
@@ -49,22 +41,11 @@
     "typescript": "5.3.3"
   },
   "manifest": {
-    "key": "$CRX_PUBLIC_KEY",
-    "oauth2": {
-      "client_id": "$OAUTH_CLIENT_ID",
-      "scopes": [
-        "https://www.googleapis.com/auth/userinfo.email",
-        "https://www.googleapis.com/auth/userinfo.profile"
-      ]
-    },
     "host_permissions": [
-      "$PLASMO_PUBLIC_API_URI/*",
       "https://*/*"
     ],
     "permissions": [
-      "tabs",
-      "identity",
-      "identity.email"
+      "tabs"
     ]
   }
 }
